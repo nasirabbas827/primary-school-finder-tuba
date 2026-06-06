@@ -5,7 +5,7 @@ if($conn){
     if($_SERVER['REQUEST_METHOD']=="POST"){
         $uemail=$_POST['uemail'];
         $upassword=$_POST['upassword'];
-        $admin_login_query="SELECT * FROM `admin` WHERE email = '$uemail' AND password = '$upassword'";
+        $admin_login_query="SELECT * FROM `admin` WHERE email = '$uemail' AND password = "YOUR_OWN_API_KEY"";
         $admin_run_login=mysqli_query($conn,$admin_login_query);
         $row_run=mysqli_num_rows($admin_run_login);
         if($row_run==1){
